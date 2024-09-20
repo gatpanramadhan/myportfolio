@@ -1,0 +1,310 @@
+/********** Template CSS **********/
+:root {
+  --primary: #33fcff;
+  --secondary: #ffc448;
+  --light: #fafafb;
+  --dark: #12141d;
+}
+
+body {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.text-primary {
+  color: #33fcff;
+}
+
+.back-to-top {
+  position: fixed;
+  display: none;
+  right: 45px;
+  bottom: 45px;
+  z-index: 99;
+}
+
+.my-6 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*** Button ***/
+.btn {
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+  color: #ffffff;
+}
+
+.btn-square {
+  width: 38px;
+  height: 38px;
+}
+
+.btn-sm-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+}
+
+/*** Navbar ***/
+.navbar.fixed-top {
+  display: none;
+  transition: 0.5s;
+}
+
+.navbar .navbar-nav .nav-link {
+  padding: 20px 15px;
+  color: var(--dark);
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  color: #33fcff;
+}
+
+#project p {
+  text-align: justify;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .navbar-nav .nav-link {
+    padding: 10px 0;
+  }
+}
+
+/*** Header ***/
+#home {
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.typed-cursor {
+  font-size: 30px;
+  color: #758694;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+    opacity: 0;
+  }
+}
+
+/*** About ***/
+#about .years .display-1 {
+  font-size: 10rem;
+  line-height: 9rem;
+}
+
+#about .years h5 {
+  letter-spacing: 30px;
+  margin-right: -30px;
+}
+
+#about .mb-4 {
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+#about img {
+  display: flex;
+  justify-content: space-between;
+}
+
+#about a {
+  background-color: #bbe9ff;
+  color: #2f3645;
+}
+
+#about a:hover {
+  background-color: #68d2e8;
+  color: white;
+  box-shadow: 0 0 5px 5px #33fcff;
+}
+
+/*** Skills ***/
+#skill .progress {
+  height: 5px;
+  border-radius: 5px;
+}
+
+#skill .progress .progress-bar {
+  width: 0px;
+  border-radius: 5px;
+  transition: 3s;
+}
+
+#skill .nav-pills .nav-link {
+  color: var(--dark);
+}
+
+#skill .nav-pills .nav-link.active {
+  color: #ffffff;
+}
+
+#skill .tab-content hr {
+  width: 30px;
+}
+
+#skill .nav-pills .nav-link {
+  color: #2f3645;
+}
+
+#skill .nav-pills .nav-link.active {
+  background-color: #bbe9ff;
+  color: #2f3645;
+}
+
+#skill button:hover {
+  background-color: #68d2e8;
+  color: white;
+  box-shadow: 0 0 5px 5px #33fcff;
+}
+
+/*** Project Portfolio ***/
+#portfolio-flters li {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--dark);
+  cursor: pointer;
+  transition: 0.5s;
+  border-bottom: 2px solid transparent;
+}
+
+#portfolio-flters li:hover,
+#portfolio-flters li.active {
+  color: #68d2e8;
+  border-color: #68d2e8;
+}
+
+.portfolio-img {
+  position: relative;
+}
+
+.portfolio-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(104, 210, 232, 0.9);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 30px;
+  padding-bottom: 100px !important;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.portfolio-item:hover .portfolio-btn {
+  opacity: 1;
+  padding-bottom: 30px !important;
+}
+
+#project p {
+  text-align: justify;
+}
+
+#contact a {
+  background-color: #68d2e8;
+  width: 300px;
+  color: white;
+}
+
+#contact a:hover {
+  background-color: #68d2e8;
+  color: white;
+  box-shadow: 0 0 5px 5px #33fcff;
+}
+
+.bg-custom {
+  background-color: #68d2e8 !important; /* Warna latar belakang #68d2e8 */
+  color: #fff; /* Warna teks putih */
+  height: 100px;
+}
+
+.bg-custom h1 {
+  color: white;
+  text-align: center;
+}
+
+.arrow .btn-primary {
+  background-color: #36c2ce !important;
+  border-color: #68d2e8 !important;
+}
+
+.arrow .btn-primary:hover {
+  background-color: #68d2e8;
+  color: white;
+  box-shadow: 0 0 5px 5px #33fcff;
+}
+
+.responsive-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -80px;
+  width: 100%;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+  float: right;
+}
+
+@media (max-width: 768px) {
+  .responsive-container {
+    margin-top: -40px;
+    justify-content: center;
+  }
+}
